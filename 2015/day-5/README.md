@@ -6,9 +6,9 @@ Santa needs help figuring out which strings in his text file are naughty or nice
 
 A nice string is one with all of the following properties:
 
--   It contains at least three vowels (aeiou only), like aei, xazegov, or aeiouaeiouaeiou.
--   It contains at least one letter that appears twice in a row, like xx, abcdde (dd), or aabbccdd (aa, bb, cc, or dd).
--   It does not contain the strings ab, cd, pq, or xy, even if they are part of one of the other requirements.
+-   It contains at least three vowels (_aeiou_ only), like _aei_, _xazegov_, or _aeiouaeiouaeiou_.
+-   It contains at least one letter that appears twice in a row, like _xx_, _abcdde_ (_dd_), or aabbccdd (_aa_, _bb_, _cc_, or _dd_).
+-   It does not contain the strings _ab_, _cd_, _pq_, or _xy_, even if they are part of one of the other requirements.
 
 For example:
 
