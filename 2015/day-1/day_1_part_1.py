@@ -1,5 +1,5 @@
 import sys
-sys.path.append('C:/wamp64/www/advent-of-code')
+sys.path.append('../advent-of-code')
 from utils import *
 
 content = get_file_content('2015/day-1/input.txt')
