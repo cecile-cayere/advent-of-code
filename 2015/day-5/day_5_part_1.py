@@ -2,8 +2,6 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-import hashlib
-
 content = get_file_content('2015/day-5/input.txt')
 content = split_string(content, "\n")
 
