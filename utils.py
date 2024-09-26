@@ -96,3 +96,10 @@ def rshift_bits(bits_table, shift):
         result[0] = 0
         shift = shift - 1
     return result
+
+def is_hex(string):
+    try:
+        int(string, 16)
+        return True
+    except ValueError:
+        return False
