@@ -13,3 +13,4 @@ This repository contains my attempts to resolve the [Advent of Code](https://adv
 -   [Day 7](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-7)
 -   [Day 8](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-8)
 -   [Day 9](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-9)
+-   [Day 10](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-10)
