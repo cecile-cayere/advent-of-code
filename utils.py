@@ -103,3 +103,22 @@ def is_hex(string):
         return True
     except ValueError:
         return False
+
+def swap_item_in_lst(lst, i, j):
+    lst = list(lst)
+    lst[i], lst[j] = lst[j], lst[i]
+    return lst
+
+def permute_lst(lst, index):
+    result = []
+    if index == len(lst) - 1:
+        return [lst]
+    
+    for i in range(index, len(lst)):
+        lst = swap_item_in_lst(lst, index, i)
+
+        result = result + permute_lst(lst, index + 1)
+
+        lst = swap_item_in_lst(lst, index, i)
+
+    return result
