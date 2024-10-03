@@ -1,7 +1,14 @@
+import json
+
 # Files:
 def get_file_content(filename):
     with open(filename) as file:
         content = file.read()
+        return content
+    
+def get_json_file_content(filename):
+    with open(filename, 'r') as file:
+        content = json.load(file)
         return content
     
 def print_file_content(filename):
