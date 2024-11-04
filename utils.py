@@ -23,6 +23,11 @@ def print_dictionary(dictionary):
     for key, value in dictionary.items():
         print(key, ": ", value)
 
+def print_map(map):
+    for line in map:
+        for point in line:
+            print(point, end=' ')
+        print()
 
 # Lists:
 def init_1_dim_list(x):
