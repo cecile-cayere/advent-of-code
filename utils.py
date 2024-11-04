@@ -129,3 +129,12 @@ def permute_lst(lst, index):
         lst = swap_item_in_lst(lst, index, i)
 
     return result
+
+def get_binary_numbers(n):
+    result = []
+    for i in range(1 << n):
+        s = bin(i)[2:]
+        s = '0' * (n - len(s)) + s
+        result = result + [list(map(int, list(s)))]
+        print(i, " / ", range(1 << n))
+    return(result)
