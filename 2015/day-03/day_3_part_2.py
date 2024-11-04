@@ -2,7 +2,7 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2015/day-3/input.txt')
+content = get_file_content('2015/day-03/input.txt')
 
 map = {
   "0;0": 2

@@ -2,12 +2,12 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2015/day-9/input.txt')
+content = get_file_content('2015/day-09/input.txt')
 content = split_string(content, "\n")
 
 distances_graph = {}
 locations_table = []
-shortest_distance = -1
+longest_distance = -1
 
 for line in content:
     line = split_string(line, " = ")
@@ -34,7 +34,7 @@ for path in paths:
         distance = distance + distances_graph[path[i]][path[i + 1]]
         i = i + 1
 
-    if(shortest_distance == -1 or distance < shortest_distance):
-        shortest_distance = distance
+    if(longest_distance == -1 or distance > longest_distance):
+        longest_distance = distance
 
-print(shortest_distance)
+print(longest_distance)

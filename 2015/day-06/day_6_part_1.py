@@ -2,7 +2,7 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2015/day-6/input.txt')
+content = get_file_content('2015/day-06/input.txt')
 content = split_string(content, "\n")
 
 lights = init_2_dim_list(1000, 1000)

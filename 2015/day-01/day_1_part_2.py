@@ -2,9 +2,10 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2015/day-1/input.txt')
+content = get_file_content('2015/day-01/input.txt')
 
 floor = 0
+i = 0
 
 for char in content:
     if(char == "("):
@@ -13,5 +14,10 @@ for char in content:
         floor = floor - 1
     else:
         print("Error: unknown character.")
+    
+    i = i + 1
 
-print(floor)
+    if(floor == -1):
+        break
+
+print(i)

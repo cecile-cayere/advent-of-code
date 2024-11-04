@@ -2,7 +2,7 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2015/day-2/input.txt')
+content = get_file_content('2015/day-02/input.txt')
 content = split_string(content, "\n")
 
 result = 0
