@@ -141,5 +141,13 @@ def get_binary_numbers(n):
         s = bin(i)[2:]
         s = '0' * (n - len(s)) + s
         result = result + [list(map(int, list(s)))]
-        print(i, " / ", range(1 << n))
     return(result)
+
+def is_prime(x):
+    if x == 0 or x == 1:
+        return False
+    elif x > 1:
+        for i in range(2, x):
+            if(x % i) == 0:
+                return False
+        return True
