@@ -20,6 +20,16 @@ for line in content:
 
 # This solution works because of the way the exercise was created, but it would be preferable to find a solution that works in the case where there's no need to make all the replacements possible. That said, I'm too lazy to do that c:
 
+# Not working case :
+'''
+FG -> e
+BC -> A
+AB -> F
+CD -> G
+
+ABCD
+'''
+
 nb_steps = 0
 
 while molecule != "e":
@@ -29,5 +39,4 @@ while molecule != "e":
             if new_molecule != molecule:
                 nb_steps += 1
                 molecule = new_molecule
-
 print(nb_steps)
