@@ -5,6 +5,31 @@ from utils import *
 
 x = int(get_file_content('2015/day-20/input.txt'))
 
+def get_correct_house(x):
+    houses = {}
+
+    for i in range(1, x + 1):
+        counter = 0
+        for j in range(i, x + 1, i):
+            if(counter == 50):
+                break
+
+            if(j in houses):
+                houses[j] = houses[j] + (i * 11)
+            else:
+                houses[j] = (i * 11)
+        
+            counter += 1
+
+            
+    for key, house in houses.items():
+        if(house >= x):
+            return(key)
+
+print(get_correct_house(x))
+
+# Other solution :
+'''
 house_number = 1
 found = False
 prime_nb = []
@@ -71,8 +96,6 @@ while not found:
         found = True
         break
 
-    #print(elves)
-    print(house_number, ":", nb_presents)
     house_number += 1
 
-print(house_number)
+print(house_number)'''

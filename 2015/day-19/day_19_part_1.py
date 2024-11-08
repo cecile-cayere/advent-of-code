@@ -1,5 +1,4 @@
 import sys
-import copy
 sys.path.append('../advent-of-code')
 from utils import *
 
