@@ -1,5 +1,3 @@
-# Pas 650, 671
-
 import sys
 import json
 import copy

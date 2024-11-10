@@ -24,3 +24,4 @@ This repository contains my attempts to resolve the [2015 Advent of Code](https:
 -   [Day 20](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-20)
 -   [Day 21](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-21)
 -   [Day 22](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-22)
+-   [Day 23](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-23)
