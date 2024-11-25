@@ -44,7 +44,7 @@ Balance the sleigh again, but this time, separate the packages into four groups 
 
 Given the example packages above, this would be some of the new unique first groups, their quantum entanglements, and one way to divide the remaining packages:
 
-| Group 1         | Group 2 | Group 3 |
+| Group 1         | Group 2 | Group 3 | Group 4 |
 | --------------- | ------- | ------- | ------- |
 | 11 4 (QE=44)    | 10 5    | 9 3 2 1 | 8 7     |
 | 10 5 (QE=50)    | 11 4    | 9 3 2 1 | 8 7     |

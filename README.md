@@ -28,3 +28,4 @@ This repository contains my attempts to resolve the [Advent of Code](https://adv
 -   [Day 22](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-22)
 -   [Day 23](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-23)
 -   [Day 24](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-24)
+-   [Day 25](https://github.com/cecile-cayere/advent-of-code/tree/main/2015/day-25)
