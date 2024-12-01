@@ -6,10 +6,6 @@ import copy
 content = get_file_content('2016/day-01/input.txt')
 content = split_string(content, ", ")
 
-def get_distance_between(point_1, point_2):
-    return(abs(point_2[0] - point_1[0]) + abs(point_2[1] - point_1[1]))
-
-
 current_position = [0, 0]
 locations_list = []
 facing = "N"
@@ -43,7 +39,7 @@ for step in content:
             print("Error!")
 
         if(current_position in locations_list):
-            print(get_distance_between([0, 0], current_position))
+            print(get_distance_between_points([0, 0], current_position))
             exit(1)
 
         else:

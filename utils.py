@@ -151,3 +151,6 @@ def is_prime(x):
             if(x % i) == 0:
                 return False
         return True
+    
+def get_distance_between_points(point_1, point_2):
+    return(abs(point_2[0] - point_1[0]) + abs(point_2[1] - point_1[1]))
