@@ -47,7 +47,7 @@ while not found:
                 prime_factors.append(prime_nb[i])
             else: i += 1
 
-        cases = get_binary_numbers(len(prime_factors))
+        cases = get_all_binary_numbers(len(prime_factors))
 
         dividers = []
         for case in cases:

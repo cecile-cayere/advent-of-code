@@ -1,6 +1,7 @@
 import json
 
 # Files:
+
 def get_file_content(filename):
     with open(filename) as file:
         content = file.read()
@@ -19,6 +20,7 @@ def split_string(string, split_char):
     return(string.split(split_char))
 
 # Dictionaries:
+
 def print_dictionary(dictionary):
     for key, value in dictionary.items():
         print(key, ": ", value)
@@ -29,20 +31,18 @@ def print_map(map):
             print(point, end=' ')
         print()
 
-# Lists:
-def init_1_dim_list(x):
-    return([0]*x)
-
-def init_2_dim_list(x, y):
-    return([[0]*x for i in range(y)])
-
-def count_values_in_2_dim_list(list, value):
-    return(sum(row.count(value) for row in list))
-
-def sum_values_in_2_dim_list(list):
-    return(sum(sum(row) for row in list))
 
 # Bits:
+
+def get_all_binary_numbers(size):
+    lst = []
+
+    for i in range(1 << size):
+        binary_nb = bin(i)[2:]
+        binary_nb = '0' * (size - len(binary_nb)) + binary_nb
+        lst = lst + [list(map(int, list(binary_nb)))]
+
+    return(lst)
 
 def pad_bits(bit_table, length = 16):
     return [0]*(length - len(bit_table)) + bit_table
@@ -89,6 +89,7 @@ def not_bits(bits_table):
 
 def lshift_bits(bits_table, shift):
     result = bits_table[:]
+
     while(shift > 0):
         i = 1
         while(i < len(bits_table)):
@@ -96,10 +97,12 @@ def lshift_bits(bits_table, shift):
             i = i + 1
         result[len(bits_table) - 1] = 0
         shift = shift - 1
+
     return result
 
 def rshift_bits(bits_table, shift):
     result = bits_table[:]
+
     while(shift > 0):
         i = len(bits_table) - 2
         while(i >= 0):
@@ -107,7 +110,26 @@ def rshift_bits(bits_table, shift):
             i = i - 1
         result[0] = 0
         shift = shift - 1
+        
     return result
+
+
+# Numbers
+
+def get_sign(x):
+    if(x != 0):
+        return(x / abs(x))
+    else:
+        return(1)
+    
+def is_prime(x):
+    if x == 0 or x == 1:
+        return False
+    elif x > 1:
+        for i in range(2, x):
+            if(x % i) == 0:
+                return False
+        return True
 
 def is_hex(string):
     try:
@@ -115,6 +137,42 @@ def is_hex(string):
         return True
     except ValueError:
         return False
+
+# Points
+
+def get_distance_between_points(point_1, point_2):
+    return(abs(point_2[0] - point_1[0]) + abs(point_2[1] - point_1[1]))
+
+
+# Lists:
+
+def init_1_dim_list(x):
+    return([0] * x)
+
+def init_2_dim_list(x, y):
+    return([[0] * x for i in range(y)])
+
+def count_values_in_2_dim_list(lst, value):
+    return(sum(row.count(value) for row in lst))
+
+def sum_values_in_2_dim_list(lst):
+    return(sum(sum(row) for row in lst))
+
+def get_max_from_list(lst):
+    return max(lst)
+
+def get_min_from_list(lst):
+    return max(lst)
+
+def remove_all_x_values_from_list(lst, x):
+   return [value for value in lst if value != x]
+
+def remove_one_x_value_from_list(lst, x):
+    lst.remove(x)
+    return(lst)
+
+def get_list_sum(lst):
+    return(sum(lst))
 
 def swap_item_in_lst(lst, i, j):
     lst = list(lst)
@@ -135,28 +193,13 @@ def permute_lst(lst, index):
 
     return result
 
-def get_binary_numbers(n):
-    result = []
-    for i in range(1 << n):
-        s = bin(i)[2:]
-        s = '0' * (n - len(s)) + s
-        result = result + [list(map(int, list(s)))]
-    return(result)
+# Triangles:
 
-def is_prime(x):
-    if x == 0 or x == 1:
-        return False
-    elif x > 1:
-        for i in range(2, x):
-            if(x % i) == 0:
-                return False
-        return True
-    
-def get_distance_between_points(point_1, point_2):
-    return(abs(point_2[0] - point_1[0]) + abs(point_2[1] - point_1[1]))
+def is_segments_triangle(segments):
+    max = get_max_from_list(segments)
+    list_without_max = remove_one_x_value_from_list(segments, max)
 
-def get_sign(nb):
-    if(nb != 0):
-        return(nb/abs(nb))
+    if(get_list_sum(list_without_max) > max):
+        return(True)
     else:
-        return(1)
+        return(False)

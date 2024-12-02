@@ -34,6 +34,7 @@ This repository contains my attempts to resolve the [Advent of Code](https://adv
 
 -   [Day 1](https://github.com/cecile-cayere/advent-of-code/tree/main/2016/day-01)
 -   [Day 2](https://github.com/cecile-cayere/advent-of-code/tree/main/2016/day-02)
+-   [Day 3](https://github.com/cecile-cayere/advent-of-code/tree/main/2016/day-03)
 
 ## [2024](https://github.com/cecile-cayere/advent-of-code/tree/main/2024)
 
