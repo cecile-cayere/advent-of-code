@@ -38,3 +38,4 @@ This repository contains my attempts to resolve the [Advent of Code](https://adv
 ## [2024](https://github.com/cecile-cayere/advent-of-code/tree/main/2024)
 
 -   [Day 1](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-01)
+-   [Day 2](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-02)
