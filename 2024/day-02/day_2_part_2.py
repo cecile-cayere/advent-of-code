@@ -1,7 +1,6 @@
 import sys
 sys.path.append('../advent-of-code')
 from utils import *
-import math
 
 content = get_file_content('2024/day-02/input.txt')
 content = split_string(content, "\n")
