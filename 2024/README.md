@@ -8,3 +8,4 @@ This repository contains my attempts to resolve the [2024 Advent of Code](https:
 -   [Day 4](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-04)
 -   [Day 5](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-05)
 -   [Day 6](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-06)
+-   [Day 7](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-07)
