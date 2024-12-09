@@ -31,6 +31,12 @@ def print_map(map):
             print(point, end=' ')
         print()
 
+def in_map(map, coordinates):
+    if(coordinates[0] >= 0 and coordinates[0] < len(map) and coordinates[1] >= 0 and coordinates[1] < len(map[coordinates[0]])):
+        return(True)
+    else:
+        return(False)
+
 
 # Bits:
 
