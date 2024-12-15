@@ -4,9 +4,6 @@ from utils import *
 
 content = get_file_content('2024/day-13/input.txt')
 content = split_string(content, "\n")
-
-map = init_2_dim_list(len(content), len(content[0]))
-
 claw_machines = []
 
 i = 0

@@ -2,12 +2,6 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-def get_pgcd(a, b):
-    while b != 0:
-        r = a % b
-        a, b = b, r
-    return a
-
 content = get_file_content('2024/day-13/input.txt')
 content = split_string(content, "\n")
 claw_machines = []
@@ -45,7 +39,7 @@ for claw_machine in claw_machines:
 
     i = ((px * by) - (py * bx)) / ((ax * by) - (ay * bx))
     j = (px - (ax * i)) / bx
-    
+
     if(int(i) == i and int(j) == j):
         total_tokens = total_tokens + (int(i) * 3) + (int(j) * 1)
 
