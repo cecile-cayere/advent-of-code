@@ -1,25 +1,61 @@
 import sys
 sys.path.append('../advent-of-code')
 from utils import *
+import os
 
-content = get_file_content('2025/day-03/input.txt')
+content = get_file_content('2025/day-04/input.txt')
 content = split_string(content, "\n")
 
-total_joltage = 0
-for bank in content:
-    bank_table = list(map(int, list(bank)))
-    joltage = ""
+map = init_2_dim_list(len(content), len(content[0]))
 
-    for i in range(0, 12):
-        end_index = len(bank_table) - (11 - i)
-        tmp_bank_table = bank_table[:end_index]
+i = 0
+for line in content:
+    j = 0
+    for char in line:
+        map[i][j] = char
+        j = j + 1
+    i = i + 1
 
-        max_nb = max(tmp_bank_table)
-        index_max_nb = tmp_bank_table.index(max_nb)
-        bank_table = bank_table[index_max_nb+1:]
-        
-        joltage = joltage + str(max_nb)
+rolls_of_paper = 0
+can_remove_rop = True
+debug = True
 
-    total_joltage = total_joltage + int(joltage)
+while can_remove_rop:
+    if(debug):
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print_map(map)
+        input()
+    can_remove_rop = False
+    i = 0
+    for line in map:
+        j = 0
+        for char in line:
 
-print(total_joltage)
+            if(map[i][j] == "@"):
+                count = 0
+                if(i - 1 >= 0 and map[i - 1][j] == "@"):
+                    count = count + 1
+                if(i + 1 < len(map) and map[i + 1][j] == "@"):
+                    count = count + 1
+                if(j - 1 >= 0 and map[i][j - 1] == "@"):
+                    count = count + 1
+                if(j + 1 < len(map[i]) and map[i][j + 1] == "@"):
+                    count = count + 1
+
+                if(i - 1 >= 0 and j - 1 >= 0 and map[i - 1][j - 1] == "@"):
+                    count = count + 1
+                if(i + 1 < len(map) and j + 1 < len(map[i]) and map[i + 1][j + 1] == "@"):
+                    count = count + 1
+                if(i + 1 < len(map) and j - 1 >= 0 and map[i + 1][j - 1] == "@"):
+                    count = count + 1
+                if(i - 1 >= 0 and j + 1 < len(map[i]) and map[i - 1][j + 1] == "@"):
+                    count = count + 1
+
+                if(count < 4):
+                    rolls_of_paper = rolls_of_paper + 1
+                    map[i][j] = "."
+                    can_remove_rop = True
+            j = j + 1
+        i = i + 1
+
+print(rolls_of_paper)
