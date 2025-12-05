@@ -209,3 +209,24 @@ def is_segments_triangle(segments):
         return(True)
     else:
         return(False)
+
+
+
+def compare_big_numbers(a: str, b: str) -> int:
+    # Suppression des zéros en tête :
+    a = a.lstrip('0')
+    b = b.lstrip('0')
+
+    # 1. Comparaison des longueurs :
+    if len(a) > len(b):
+        return 1
+    elif len(a) < len(b):
+        return -1
+
+    # 2. Comparaison lexicographique :
+    if a > b:
+        return 1
+    elif a < b:
+        return -1
+    else:
+        return 0

@@ -54,3 +54,12 @@ This repository contains my attempts to resolve the [Advent of Code](https://adv
 -   [Day 14](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-14)
 -   [Day 15](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-15)
 -   [Day 16](https://github.com/cecile-cayere/advent-of-code/tree/main/2024/day-16)
+
+## [2025](https://github.com/cecile-cayere/advent-of-code/tree/main/2024)
+
+-   [Day 1](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-01)
+-   [Day 2](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-02)
+-   [Day 3](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-03)
+-   [Day 4](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-04)
+-   [Day 5](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-05)
+-   [Day 6](https://github.com/cecile-cayere/advent-of-code/tree/main/2025/day-06)
