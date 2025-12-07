@@ -2,33 +2,32 @@ import sys
 sys.path.append('../advent-of-code')
 from utils import *
 
-content = get_file_content('2025/day-06/input.txt')
+content = get_file_content('2025/day-07/input.txt')
 content = split_string(content, "\n")
 
-sheet = []
+map = init_2_dim_list(len(content[0]), len(content))
 
-for line in content:
-    line = " ".join(line.split())
-    sheet.append(split_string(line, " "))
-
-length = len(sheet)
-sum = 0
 i = 0
-
-while i < len(sheet[0]):
-    if(sheet[-1][i] == "+"):
-        result = 0
-        j = 0
-        while j < length - 1:
-            result = result + int(sheet[j][i])
-            j = j + 1
-    else:
-        result = 1
-        j = 0
-        while j < length - 1:
-            result = result * int(sheet[j][i])
-            j = j + 1
-    sum = sum + result
+for line in content:
+    j = 0
+    for char in line:
+        map[i][j] = char
+        j = j + 1
     i = i + 1
 
-print(sum)
+count = 0
+i = 0
+while i < len(map) - 1:
+    j = 0
+    while j < len(map[0]):
+        if (map[i][j] == "S" or map[i][j] == "|"):
+            if(map[i + 1][j] == "."):
+                map[i + 1][j] = "|"
+            elif(map[i + 1][j] == "^"):
+                count = count + 1
+                map[i + 1][j - 1] = "|"
+                map[i + 1][j + 1] = "|"
+                
+        j = j + 1
+    i = i + 1
+print(count)
